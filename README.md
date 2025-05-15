@@ -1,40 +1,50 @@
+# Figma Plugin Vue.js Boilerplate
+
+This is a boilerplate for developing Figma plugins using Vue.js. It provides a starting point for creating powerful and interactive Figma plugins with a modern frontend framework.
+
+## Overview
+
+This plugin template uses Vue.js, TypeScript, and NPM to create a robust development environment for Figma plugins. Vue.js allows you to build a component-based UI, while TypeScript provides type safety and better developer experience.
+
+## Getting Started
+
 Below are the steps to get your plugin running. You can also find instructions at:
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+https://www.figma.com/plugin-docs/plugin-quickstart-guide/
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
-
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
+First, download Node.js which comes with NPM. This will allow you to install TypeScript, Vue.js, and other
 libraries. You can find the download link here:
 
-  https://nodejs.org/en/download/
+https://nodejs.org/en/download/
 
-Next, install TypeScript using the command:
+Next, install the dependencies by running:
 
-  npm install -g typescript
+npm install
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+This will install Vue.js, TypeScript, and other required packages defined in package.json.
 
-  npm install --save-dev @figma/plugin-typings
+To get the latest type definitions for the Figma plugin API, run:
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+npm install --save-dev @figma/plugin-typings
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+## Development
 
-For more information, visit https://www.typescriptlang.org/
-
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
-
-We recommend writing TypeScript code using Visual Studio code:
+We recommend using Visual Studio Code for development:
 
 1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
 2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
+3. Start the development server: Run `npm run dev` in the terminal.
 
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+The build process will compile your TypeScript and Vue files and bundle them for use in Figma.
+
+## Project Structure
+
+- `code/` - Contains the plugin's main code that interacts with the Figma API
+- `ui/` - Contains Vue components for the plugin's user interface
+- `dist/` - Build output directory
+
+## Building for Production
+
+Run `npm run build` to create a production build of your plugin.
+
+That's it! You're now ready to develop your Figma plugin using Vue.js.
