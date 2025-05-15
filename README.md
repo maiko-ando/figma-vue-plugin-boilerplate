@@ -19,13 +19,17 @@ https://nodejs.org/en/download/
 
 Next, install the dependencies by running:
 
+```
 npm install
+```
 
 This will install Vue.js, TypeScript, and other required packages defined in package.json.
 
 To get the latest type definitions for the Figma plugin API, run:
 
+```
 npm install --save-dev @figma/plugin-typings
+```
 
 ## Development
 
